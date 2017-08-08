@@ -1,0 +1,36 @@
+head
+  title= title
+  meta(name="description" content="The store of a Good Good podcast")
+  link(id="favicon" rel="icon" href="https://glitch.com/favicon.ico" type="image/x-icon")
+  meta(charset="utf-8")
+  meta(http-equiv="X-UA-Compatible" content="IE=edge")
+  meta(name="viewport" content="width=device-width, initial-scale=1")
+  link(rel="stylesheet" href="/styles/styles.css")
+body
+  #app(@mousedown="splatter" :class="page")
+
+    header
+      .header-container
+        a(href="/")
+          h1.good Good
+          h1.goods Goods
+
+    block content
+
+    footer
+      p= "Good Goods is made by good friends "
+        a(href="#") Pirijan
+        span= " and "
+        a(href="#") Michelle
+      p 
+        a(href="#") Support us on Patreon
+      p
+        a(href="https://glitch.com/edit/#!/goodgoods") View code
+
+  if production
+    script(src="https://vuejs.org/js/vue.min.js")
+  else
+    script(src="https://vuejs.org/js/vue.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js")
+
+  block scripts

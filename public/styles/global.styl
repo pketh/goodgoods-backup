@@ -1,0 +1,49 @@
+sans-serif = "Helvetica", Arial, Sans-serif
+primary-color = black
+link-color = blueviolet
+
+@font-face
+  font-family: frankfurter
+  font-style: bold
+  src: url('https://cdn.glitch.com/ba48b5f1-377a-42b0-80c9-5625dcaab9de%2Ffrankfurter.woff2?1502065048672')
+
+body
+  font-family: sans-serif
+  background-color: white
+  margin: 0
+  padding: 0
+  
+#app
+  padding: 8px
+  padding-top: 20px
+  padding-left: 15px
+  padding-right: 15px
+  height: calc(100% - 28px)
+
+a
+  color: link-color
+
+header
+  position: absolute
+  left: 50%
+  .header-container
+    position: relative
+    left: -50%
+  h1
+    font-family: frankfurter
+    margin: 0
+    line-height: 32px
+    text-align: center
+  a
+    color: primary-color
+    text-decoration: none
+    
+  // .good
+  //   color: blue
+  // .goods
+  //   color: pink
+
+section,
+footer
+  margin-top: 20px
+
