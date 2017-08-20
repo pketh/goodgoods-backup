@@ -16,8 +16,10 @@ window.onresize = ->
   if window.innerWidth != windowWidth
     windowWidth = window.innerWidth
     canvas.width = window.innerWidth
-    canvas.height = window.innerHeight
+    canvas.height = window.innerHeight + 20
     context = canvas.getContext('2d')
+  # else
+  #   canvas.height = window.innerHeight
 
 addSplatter = (x, y) ->
   size = 50
@@ -48,15 +50,20 @@ randomKoamoji = ->
     '＼(￣O￣)'
   ]
   _.sample(KAOMOJI) + ' '
-    
+        
 index = new Vue
   el: '#app'
   data:
     page: 'index-page'
-    greeting: randomKoamoji()
     soundcloud: SOUNDCLOUD
+    itunes: ITUNES
+    twitter: TWITTER
+    greeting: randomKoamoji()
+
+  methods:
     splatter: (event) ->
       x = event.clientX
       y = event.clientY
       addSplatter x, y
-
+    # animationend: (event) ->
+    #   console.log event
