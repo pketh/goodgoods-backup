@@ -2,6 +2,8 @@ sans-serif = "Helvetica", Arial, Sans-serif
 primary-color = black
 link-color = blueviolet
 
+SMALL_WIDTH = 420px
+
 @font-face
   font-family: frankfurter
   font-style: bold
@@ -19,11 +21,15 @@ body
   padding-left: 15px
   padding-right: 15px
   height: calc(100% - 28px)
+  position: relative
 
 a
   color: link-color
+  &:hover
+    text-decoration: none
 
 header
+  z-index: 1
   position: absolute
   left: 50%
   .header-container
@@ -46,4 +52,13 @@ header
 section,
 footer
   margin-top: 20px
+
+footer
+  margin-bottom: 2rem
+  p
+    span
+      background-color: white
+      padding: 3px
+      border-radius: 5px
+      
 

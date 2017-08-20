@@ -2,8 +2,25 @@ extends layout.pug
 
 block content
   main
-    blockquote {{message}}
-    blockquote hello i am block yoyo i am also component sdf
+    nav
+      .greeting
+        span {{greeting}}
+        span Listen to our 
+        a(:href="soundcloud") Good Good 
+        span podcast
+        .greeting-link.left
+          a(href="1") iTunes
+        .greeting-link.middle 
+          a(href="2") SoundCloud
+        .greeting-link.right
+          a(href="3") Patreon
+
+    .item.sheets
+      a(href="#")
+        img.bedsheet.four(src="https://cdn.glitch.com/ba48b5f1-377a-42b0-80c9-5625dcaab9de%2Fbedsheet5.svg?1502402521733")
+        img.bedsheet.three(src="https://cdn.glitch.com/ba48b5f1-377a-42b0-80c9-5625dcaab9de%2Fbedsheet3.svg?1502398756127")                              
+        img.bedsheet.two(src="https://cdn.glitch.com/ba48b5f1-377a-42b0-80c9-5625dcaab9de%2Fbedsheet2.svg?1502409728914")
+        img.bedsheet.one(src="https://cdn.glitch.com/ba48b5f1-377a-42b0-80c9-5625dcaab9de%2Fbedsheet.svg?1502238319465")
 
     canvas#background
 

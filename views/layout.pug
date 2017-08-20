@@ -18,19 +18,23 @@ body
     block content
 
     footer
-      p= "Good Goods is made by good friends "
-        a(href="#") Pirijan
-        span= " and "
-        a(href="#") Michelle
-      p 
-        a(href="#") Support us on Patreon
       p
-        a(href="https://glitch.com/edit/#!/goodgoods") View code
+        span= "Good Goods is made by good friends "
+          a(href="#") Pirijan
+          span= " and "
+          a(href="#") Michelle
+      p 
+        span
+          a(href="#") Support us on Patreon
+      p
+        span
+          a(href="https://glitch.com/edit/#!/goodgoods") View code
 
   if production
     script(src="https://vuejs.org/js/vue.min.js")
   else
     script(src="https://vuejs.org/js/vue.js")
   script(src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js")
+  script(src="/scripts/global.js")
 
   block scripts
