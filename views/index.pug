@@ -4,28 +4,83 @@ block content
   main
     nav
       .greeting
-        span {{greeting}}
+        span {{kaomoji}}
         span Listen to our 
         a(:href="soundcloud") Good Good 
         span podcast
         .greeting-link.left
-          a(href="1") iTunes
+          a(:href="itunes") iTunes
         .greeting-link.middle 
-          a(href="2") SoundCloud
-        .greeting-link.right
-          a(href="3") Patreon
+          a(:href="soundcloud") SoundCloud
+        // .greeting-link.right
+        //   a(:href="patreon") Patreon
 
-    .item.sheets
+    .item.shelving
       a(href="#")
-        img.bedsheet.four(src="https://cdn.glitch.com/ba48b5f1-377a-42b0-80c9-5625dcaab9de%2Fbedsheet5.svg?1502402521733")
-        img.bedsheet.three(src="https://cdn.glitch.com/ba48b5f1-377a-42b0-80c9-5625dcaab9de%2Fbedsheet3.svg?1502398756127")                              
-        img.bedsheet.two(src="https://cdn.glitch.com/ba48b5f1-377a-42b0-80c9-5625dcaab9de%2Fbedsheet2.svg?1502409728914")
-        img.bedsheet.one(src="https://cdn.glitch.com/ba48b5f1-377a-42b0-80c9-5625dcaab9de%2Fbedsheet.svg?1502238319465")
+        img(src="https://cdn.glitch.com/ba48b5f1-377a-42b0-80c9-5625dcaab9de%2Fshelves-bk.svg?1506282905831")
+        .peg-container
+          - peg = "https://cdn.glitch.com/ba48b5f1-377a-42b0-80c9-5625dcaab9de%2Fpeg.svg?1506283283326"
+          - pegs = 5
+          - pegIndex = 0
+          while pegIndex < pegs
+            img.peg(src=peg)
+
+
+    .item.mugs
+      a(:href="ep7")
+        .base
+          img(src="https://cdn.glitch.com/ba48b5f1-377a-42b0-80c9-5625dcaab9de%2Fmug-base.svg?1504137273251")
+          .pieces
+            .smoke-container
+              .smoke
+            img.hand(src="https://cdn.glitch.com/ba48b5f1-377a-42b0-80c9-5625dcaab9de%2Fmug-hand.svg?1504132368029")
 
     .item.resort
-      a(href="#")
-        img(src="https://cdn.glitch.com/ba48b5f1-377a-42b0-80c9-5625dcaab9de%2FC3_phu6VUAAU86F.jpg-large.jpeg?1502041088731")
+      a(:href="ep4")
+        img.night.fade-in(src="https://cdn.glitch.com/ba48b5f1-377a-42b0-80c9-5625dcaab9de%2Fresort-night.svg?1504385462936")
+        img.day.fade-out(src="https://cdn.glitch.com/ba48b5f1-377a-42b0-80c9-5625dcaab9de%2Fresort-day.svg?1504385462859")
+        img.waves(src="https://cdn.glitch.com/ba48b5f1-377a-42b0-80c9-5625dcaab9de%2Fresort-waves.svg?1503962632198")
+        img.tides(src="https://cdn.glitch.com/ba48b5f1-377a-42b0-80c9-5625dcaab9de%2Fresort-tides.svg?1504385462987")
 
+    .item.bedsheets
+      a(:href="ep2")
+        img.bedsheet._4(src="https://cdn.glitch.com/ba48b5f1-377a-42b0-80c9-5625dcaab9de%2Fbedsheet5.svg?1502402521733")
+        img.bedsheet._3(src="https://cdn.glitch.com/ba48b5f1-377a-42b0-80c9-5625dcaab9de%2Fbedsheet3.svg?1502398756127")                              
+        img.bedsheet._2(src="https://cdn.glitch.com/ba48b5f1-377a-42b0-80c9-5625dcaab9de%2Fbedsheet2.svg?1502409728914")
+        img.bedsheet._1(src="https://cdn.glitch.com/ba48b5f1-377a-42b0-80c9-5625dcaab9de%2Fbedsheet.svg?1502238319465")
+
+    .item.notebook
+      a(:href="ep1")
+        img.book(src="https://cdn.glitch.com/ba48b5f1-377a-42b0-80c9-5625dcaab9de%2Fnotebook-base.svg?1504385665102")
+        img.hit(src="https://cdn.glitch.com/ba48b5f1-377a-42b0-80c9-5625dcaab9de%2Fnotebook-hit.svg?1504379545317")
+        img.hammer(src="https://cdn.glitch.com/ba48b5f1-377a-42b0-80c9-5625dcaab9de%2Fnotebook-hammer.svg?1504380166494")
+
+    // .item.season-one-theme-song
+    //   a(href="https://soundcloud.com/meeshu-b/lets-check-in-the-back")
+    //     button theme song
+    //     img(src="https://cdn.glitch.com/ba48b5f1-377a-42b0-80c9-5625dcaab9de%2FC3_phu6VUAAU86F.jpg-large.jpeg?1502041088731")
+
+    section.more-episodes
+      img.moar(src="https://cdn.glitch.com/ba48b5f1-377a-42b0-80c9-5625dcaab9de%2Fmoar.svg?1506282905842")
+      ul
+        li 🚿
+          a(:href="ep3")
+            span Shower Faucets
+        li 🍍
+          a(:href="ep5")
+            span Bongs – 4/20 Special
+        li 🙉
+          a(:href="ep6")
+            span Solving Downers
+        li 🌴
+          a(:href="ep8")
+            span Stores
+        li ☕️
+          a(:href="ep9")
+            span Lean Café
+        li 🏀
+          a(:href="ep10")
+            span MagNet (Parisian Double-Length Feature)
 
 
 

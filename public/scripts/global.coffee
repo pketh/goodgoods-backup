@@ -4,7 +4,7 @@ MICHELLE = 'https://twitter.com/mjbearheart'
 SOUNDCLOUD = 'https://soundcloud.com/good-goods'
 ITUNES = 'https://itunes.apple.com/us/podcast/good-goods/id1217665170?mt=2'
 TWITTER = 'https://twitter.com/goodgoodscast'
-PATREON = ''
+# PATREON = ''
 
 EPISODES =
   EP1:

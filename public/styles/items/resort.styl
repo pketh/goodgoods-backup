@@ -1,0 +1,65 @@
+RESORT_DURATION = 1.5s
+RESORT_DELAY = 2s
+WAVE_LIGHT_DURATION = .3s
+EASE_IN_OUT_SINE = cubic-bezier(0.445, 0.05, 0.55, 0.95)
+TIDES_DURATION = 3s
+  
+.resort
+
+  .day
+    position: absolute
+    top: 0
+    left: 0
+      
+  .fade-out
+    animation: fadeOut RESORT_DURATION ease-in
+    animation-fill-mode: forwards
+    animation-delay: RESORT_DELAY
+
+  .fade-in
+    animation: fadeIn RESORT_DURATION ease-in
+    animation-fill-mode: forwards
+    animation-delay: RESORT_DELAY
+    opacity: 0
+    
+  .waves
+    position: absolute
+    top: 62%
+    width: 55%
+    left: 18%
+    animation: wavelight WAVE_LIGHT_DURATION linear infinite
+    animation-direction: alternate
+
+  .tides
+    position: absolute
+    width: 100%
+    left: 0
+    // bottom: 10%
+    animation: tidewaves TIDES_DURATION ease-out infinite
+    animation-direction: alternate
+    
+@keyframes fadeOut
+  to
+    opacity: 0
+
+@keyframes fadeIn
+  to
+    opacity: 1
+
+@keyframes wavelight
+  from
+    opacity: .7
+    left: 21.5%
+  to
+    opacity: .7
+    left: 22%
+
+@keyframes tidewaves
+  from
+    width: 100%
+    bottom: 0%
+    left: 0%
+  to
+    width: 90%
+    left: 5%
+    bottom: 5%

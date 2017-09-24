@@ -1,5 +1,5 @@
 PALETTE = ['fuchsia', 'blue', 'cyan', 'red', 'yellow', 'lime']
-AUTO_SPLATTERS = [500, 800, 600, 500, 600, 400, 800, 500, 1000, 1200, 800, 1000, 500, 500, 800, 600, 500, 600, 400, 800, 500, 1000, 1200, 800, 1000, 500, 500, 800, 600, 500, 600, 400, 800, 500, 1000, 1200, 800, 1000, 500]
+AUTO_SPLATTERS = [500, 800, 600, 500, 600, 400, 800, 500, 1000, 1200, 800, 1000, 500, 500, 800, 600, 500, 600, 400, 800, 500]
 canvas = undefined
 context = undefined
 windowWidth = undefined
@@ -36,7 +36,7 @@ addRandomSplatter = ->
   y = _.random 0, maxY
   addSplatter x, y
 
-autoSplatter = -> 
+autoSplatter = ->
   currentDelay = 0
   AUTO_SPLATTERS.forEach (delay) ->
     setTimeout addRandomSplatter, currentDelay + delay
@@ -50,20 +50,33 @@ randomKoamoji = ->
     '＼(￣O￣)'
   ]
   _.sample(KAOMOJI) + ' '
-        
+
+episodeUrl = (number) ->
+  EPISODES["EP#{number}"].URL
+
 index = new Vue
   el: '#app'
   data:
     page: 'index-page'
+    pirijan: PIRIJAN
+    michelle: MICHELLE
     soundcloud: SOUNDCLOUD
     itunes: ITUNES
     twitter: TWITTER
-    greeting: randomKoamoji()
+    kaomoji: randomKoamoji()
+    ep1: episodeUrl 1
+    ep2: episodeUrl 2
+    ep3: episodeUrl 3
+    ep4: episodeUrl 4
+    ep5: episodeUrl 5
+    ep6: episodeUrl 6
+    ep7: episodeUrl 7
+    ep8: episodeUrl 8
+    ep9: episodeUrl 9
+    ep10: episodeUrl 10
 
   methods:
     splatter: (event) ->
       x = event.clientX
       y = event.clientY
       addSplatter x, y
-    # animationend: (event) ->
-    #   console.log event
