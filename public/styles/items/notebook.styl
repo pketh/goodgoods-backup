@@ -1,0 +1,43 @@
+HAMMER_DURATION = 1.5s
+
+.notebook
+
+  .hit
+    position: absolute
+    top: 25%
+    left: 20%
+    width: 50%
+    animation: hammerHit (HAMMER_DURATION * 2) ease-in infinite
+    // animation-direction: forwards
+
+  .hammer
+    position: absolute
+    width: 60%
+    right: -20%
+    animation: hammering HAMMER_DURATION ease-in infinite
+    animation-direction: alternate
+
+@keyframes hammering
+  from
+    right: -20%
+    top: -10%
+  to 
+    right: 0%
+    top: 18%
+    transform: rotate(-20deg)
+
+@keyframes hammerHit
+  0%
+    opacity: 0
+  45%
+    opacity: 0
+  46%
+    opacity: 1
+  55%
+    opacity: 1
+  56%
+    opacity: 0
+  100%
+    opacity: 0
+
+

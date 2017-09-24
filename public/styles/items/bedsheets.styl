@@ -1,0 +1,32 @@
+BEDSHEET_DELAY = 1.5s
+BEDSHEET_DURATION = 0.5s
+
+.bedsheets
+  overflow: hidden
+  border-radius: 5px
+
+  .bedsheet
+    width: 100%
+    &._1
+    &._2
+    &._3
+      animation: slideUp BEDSHEET_DURATION ease-out
+      animation-fill-mode: forwards
+      position: absolute
+      left: 0
+      top: 0
+    &._1
+      animation-delay: (BEDSHEET_DELAY * 1)
+    &._2
+      animation-delay: (BEDSHEET_DELAY * 2) + (BEDSHEET_DURATION * 1)
+    &._3
+      animation-delay: (BEDSHEET_DELAY * 3) + (BEDSHEET_DURATION * 2)
+    &._4
+      position: relative
+
+@keyframes slideUp
+  to
+    transform: translateY(-100%)
+
+// @keyframes slideDownPartway
+//   top

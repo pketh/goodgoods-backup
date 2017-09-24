@@ -1,0 +1,41 @@
+MUG_SMOKE = "https://cdn.glitch.com/ba48b5f1-377a-42b0-80c9-5625dcaab9de%2Fmug-smoke.svg?1504135441339"               
+SMOKE_HEIGHT = 65px
+.mugs
+  .base
+    position: relative
+  .pieces
+    position: absolute
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+  .hand
+    position: absolute
+    width: 52%
+    right: 3%
+    bottom: 25%
+  .smoke-container
+    position: absolute
+    width: 8%;
+    right: 38%;
+    bottom: 41%;
+    height: 20%;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    overflow: hidden;
+  .smoke
+    width: 100%
+    height: 100%
+    background-image: url(MUG_SMOKE)                    
+    background-size: contain;
+    // background-position: center bottom;
+    background-repeat: repeat-y;
+    animation: scrollVertically 12s linear infinite
+    animation-direction: forward
+
+@keyframes scrollVertically
+  from
+    background-position: center 0    
+  to 
+    background-position: center -(SMOKE_HEIGHT * 2 + 4)
+
