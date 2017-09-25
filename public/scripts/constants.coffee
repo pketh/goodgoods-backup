@@ -38,9 +38,8 @@ EPISODES =
     NAME: "MagNet (Parisian Double-Length Feature)"
     URL: "https://soundcloud.com/good-goods/10-magnet-parisian-double-length-feature"
   EP11:
-    NAME: ""
+    NAME: "Universal Shelving System"
     URL: ""
   EP12:
     NAME: ""
     URL: ""
-  
